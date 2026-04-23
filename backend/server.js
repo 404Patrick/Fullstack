@@ -9,21 +9,30 @@ const app = express();
 app.use(cors());          // povolí CORS
 app.use(express.json());  // umožní číst JSON data z requestu (req.body)
 
-// jednoduchá "databáze" v paměti (pole aut)
+// "databáze" v paměti (pole aut)
 let cars = [
   {
     id: 1,
     brand: "Škoda Octavia 2 RS",
+    type: "Hatchback",
+    power: "147 kW",
+    modelYear: 2009,
     image: "https://carlook.net/data/db_photos/skoda/octavia_rs/2nd_f/skoda_octavia_rs_2nd_f_touring5d-976.jpg"
   },
   {
     id: 2,
     brand: "BMW M3",
+    type: "Sedan",
+    power: "375 kW",
+    modelYear: 2024,
     image: "https://cdn.motor1.com/images/mgl/JO3pmX/s1/2024-bmw-m3-cs.jpg"
   },
   {
     id: 3,
     brand: "Audi R8",
+    type: "Coupe",
+    power: "449 kW",
+    modelYear: 2022,
     image: "https://doubleapex.co.za/wp-content/uploads/2022/10/Audi-R8-Coupe-V10-GT-RWD.jpeg"
   }
 ];
