@@ -10,7 +10,23 @@ app.use(cors());          // povolí CORS
 app.use(express.json());  // umožní číst JSON data z requestu (req.body)
 
 // jednoduchá "databáze" v paměti (pole aut)
-let cars = [];
+let cars = [
+  {
+    id: 1,
+    brand: "Škoda Octavia 2 RS",
+    image: "https://carlook.net/data/db_photos/skoda/octavia_rs/2nd_f/skoda_octavia_rs_2nd_f_touring5d-976.jpg"
+  },
+  {
+    id: 2,
+    brand: "BMW M3",
+    image: "https://cdn.motor1.com/images/mgl/JO3pmX/s1/2024-bmw-m3-cs.jpg"
+  },
+  {
+    id: 3,
+    brand: "Audi R8",
+    image: "https://doubleapex.co.za/wp-content/uploads/2022/10/Audi-R8-Coupe-V10-GT-RWD.jpeg"
+  }
+];
 
 // GET /cars → vrátí všechna auta
 app.get("/cars", (req, res) => {
